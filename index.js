@@ -38,7 +38,7 @@ addCmd('ukraine', 'Get info about ukraine.', msg => {
             .setDescription('News about the Ukrainian War');
         
         for (let i = 0; i < 10; i++) {
-            embed.addField(json[i].title, json[i].url);
+            embed.addField(json[i].title.substring(0, 256), json[i].url);
         }
 
         msg.channel.send({
